@@ -1,37 +1,27 @@
-# 🎥 Live YouTube Data Analysis Pipeline
+#  Live YouTube Data Analysis Pipeline
 
-This project demonstrates how to build an end-to-end YouTube data pipeline using Databricks and the Medallion Architecture (Bronze, Silver, Gold layers).
+This project demonstrates an **end-to-end YouTube data pipeline** using **Databricks** and the **Medallion Architecture** (Bronze → Silver → Gold).
 
-🚀 Pipeline Workflow
+---
 
-Data Ingestion
+##  Pipeline Workflow
 
-1.Extract live YouTube data using the YouTube API
+1. **Bronze Layer (Data Ingestion)**: Fetch live YouTube data via the YouTube API and save as raw JSON.  
+2. **Silver Layer (Data Transformation)**: Clean and structure the raw data into tabular format (CSV).  
+3. **Gold Layer (Aggregation)**: Aggregate the structured data for reporting (e.g., video counts per channel).  
+4. **Reporting**: Display or export curated insights for dashboards.
 
-2.Store raw data in Bronze Layer (JSON format)
+---
 
-Data Transformation
+##  Tech Stack
 
-1.Clean and structure the data in the Silver Layer
+- Databricks (Spark + Delta Lake) or local Python execution  
+- YouTube Data API  
+- JSON, Pandas, Requests  
+- Medallion Architecture (Bronze/Silver/Gold)  
+- Visualization: Power BI, Tableau, or Databricks SQL
 
-2.Apply schema, filters, and business logic
+---
 
-Data Aggregation
+##  Project Structure
 
-1.Summarize and enrich data in the Gold Layer
-
-2.Ready for analytics & reporting
-
-Data Reporting
-
-1.Build dashboards for performance insights
-
-2.Example: video views, likes, engagement trends
-
-🛠️ Tech Stack
-
-.Databricks (Delta Lake + Spark)
-.YouTube API
-.JSON for raw storage
-.Medallion Architecture
-.Visualization Tool (Power BI / Databricks SQL / Tableau)
